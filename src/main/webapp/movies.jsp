@@ -14,7 +14,8 @@
             background-color: #4f5468;
         }
         .backButton {
-            margin-top: 5%;
+            margin-top: 20px;
+            margin-right: 10px;
         }
     </style>
 </head>

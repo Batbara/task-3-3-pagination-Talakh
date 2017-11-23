@@ -16,12 +16,4 @@
     <listener>
         <listener-class>by.tr.web.controller.listeners.FrontControllerListener</listener-class>
     </listener>
-    <servlet>
-        <servlet-name>Movies</servlet-name>
-        <jsp-file>/movies.jsp</jsp-file>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Movies</servlet-name>
-        <url-pattern>/movies</url-pattern>
-    </servlet-mapping>
 </web-app>
