@@ -6,7 +6,6 @@ import by.tr.web.domain.MovieList;
 import by.tr.web.exception.dao.MovieDAOException;
 import by.tr.web.exception.service.MovieServiceException;
 import by.tr.web.service.MovieService;
-import by.tr.web.service.factory.ServiceFactory;
 
 import java.io.File;
 

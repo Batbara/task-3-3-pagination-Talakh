@@ -1,7 +1,5 @@
 package by.tr.web.exception;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 public class ExceptionMessage {
     public static final String SAX_PARSER_ERROR = "SAX parser error";
     public static final String IO_STREAM_ERROR = "IO Stream error";

@@ -3,7 +3,6 @@ package by.tr.web.service.impl;
 import by.tr.web.dao.MovieDAO;
 import by.tr.web.dao.factory.DAOFactory;
 import by.tr.web.domain.MovieList;
-import by.tr.web.exception.ExceptionMessage;
 import by.tr.web.exception.dao.MovieDAOException;
 import by.tr.web.exception.service.MovieServiceException;
 import by.tr.web.service.MovieService;

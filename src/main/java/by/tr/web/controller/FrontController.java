@@ -10,15 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class FrontController extends HttpServlet {
-    CommandProvider commandProvider = new CommandProvider();
-
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        System.out.println("initing!");
-
-    }
+    private CommandProvider commandProvider = new CommandProvider();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);

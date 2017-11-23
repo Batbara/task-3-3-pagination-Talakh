@@ -11,33 +11,24 @@ public class ServiceFactory {
     private MovieService domServiceImpl = new MovieDOMServiceImpl();
     private MovieService staxServiceImpl = new MovieSTAXServiceImpl();
     private MovieService saxServiceImpl = new MovieSAXServiceImpl();
-    public static ServiceFactory getInstance(){
+
+    public static ServiceFactory getInstance() {
         return instance;
     }
 
-    private ServiceFactory(){}
+    private ServiceFactory() {
+    }
 
     public MovieService getDomServiceImpl() {
         return domServiceImpl;
-    }
-
-    public void setDomServiceImpl(MovieService domServiceImpl) {
-        this.domServiceImpl = domServiceImpl;
     }
 
     public MovieService getStaxServiceImpl() {
         return staxServiceImpl;
     }
 
-    public void setStaxServiceImpl(MovieService staxServiceImpl) {
-        this.staxServiceImpl = staxServiceImpl;
-    }
-
     public MovieService getSaxServiceImpl() {
         return saxServiceImpl;
     }
 
-    public void setSaxServiceImpl(MovieService saxServiceImpl) {
-        this.saxServiceImpl = saxServiceImpl;
-    }
 }

@@ -31,7 +31,6 @@ public class MovieSTAXImpl implements MovieDAO {
         endElementID = startElementID + numberOfElements;
         try {
             InputStream input = new FileInputStream(source);
-            StreamFilter filter = new STAXMovieFilter(startElementID, startElementID+numberOfElements);
             XMLStreamReader reader = inputFactory.createXMLStreamReader(input);
            //  reader = inputFactory.createFilteredReader(reader,filter);
             movieList = process(reader);

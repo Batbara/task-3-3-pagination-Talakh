@@ -19,23 +19,12 @@ public class DAOFactory {
         return movieDOMImpl;
     }
 
-    public void setMovieDOMImpl(MovieDAO movieDOMImpl) {
-        this.movieDOMImpl = movieDOMImpl;
-    }
-
     public MovieDAO getMovieSAXImpl() {
         return movieSAXImpl;
-    }
-
-    public void setMovieSAXImpl(MovieDAO movieSAXImpl) {
-        this.movieSAXImpl = movieSAXImpl;
     }
 
     public MovieDAO getMovieSTAXImpl() {
         return movieSTAXImpl;
     }
 
-    public void setMovieSTAXImpl(MovieDAO movieSTAXImpl) {
-        this.movieSTAXImpl = movieSTAXImpl;
-    }
 }

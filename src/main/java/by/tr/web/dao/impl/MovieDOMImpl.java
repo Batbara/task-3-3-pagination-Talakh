@@ -28,10 +28,7 @@ public class MovieDOMImpl implements MovieDAO {
             Document document = parser.getDocument();
 
             Element root = document.getDocumentElement();
-            System.out.println(root.getNodeName());
 
-            StringBuilder nameSpace = new StringBuilder(
-                    root.getPrefix() != null ? root.getPrefix() + ":" : "");
             NodeList movies = root.getElementsByTagNameNS(XMLParameter.NAMESPACE,XMLParameter.MOVIE);
 
             movieList = new MovieList();
