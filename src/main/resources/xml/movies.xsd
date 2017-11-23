@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.epam.tc.com/movies"
+           xmlns:tns="http://www.epam.tc.com/movies"
+           elementFormDefault="qualified">
+    <xs:element name="movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" type="tns:Movie"
+                            minOccurs="1"
+                            maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Movie">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string" />
+            <xs:element name="genre" type="tns:Genre" />
+            <xs:element name="year" type="tns:Year"/>
+            <xs:element name="director" type="tns:Director" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:positiveInteger" use="required" />
+    </xs:complexType>
+    <xs:simpleType name="Genre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="comedy"/>
+            <xs:enumeration value="drama"/>
+            <xs:enumeration value="action"/>
+            <xs:enumeration value="romance"/>
+            <xs:enumeration value="crime"/>
+            <xs:enumeration value="horror"/>
+            <xs:enumeration value="fantasy"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="Year">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1920"/>
+            <xs:maxInclusive value="2017"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Director">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="surname" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
