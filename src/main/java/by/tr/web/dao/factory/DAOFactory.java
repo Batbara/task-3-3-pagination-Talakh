@@ -1,15 +1,15 @@
 package by.tr.web.dao.factory;
 
 import by.tr.web.dao.MovieDAO;
-import by.tr.web.dao.impl.MovieDOMImpl;
-import by.tr.web.dao.impl.MovieSAXImpl;
-import by.tr.web.dao.impl.MovieSTAXImpl;
+import by.tr.web.dao.impl.MovieDOMParser;
+import by.tr.web.dao.impl.MovieSAXParser;
+import by.tr.web.dao.impl.MovieSTAXParser;
 
 public class DAOFactory {
     private static DAOFactory instance = new DAOFactory();
-    private MovieDAO movieDOMImpl = new MovieDOMImpl();
-    private MovieDAO movieSAXImpl = new MovieSAXImpl();
-    private MovieDAO movieSTAXImpl = new MovieSTAXImpl();
+    private MovieDAO movieDOMImpl = new MovieDOMParser();
+    private MovieDAO movieSAXImpl = new MovieSAXParser();
+    private MovieDAO movieSTAXImpl = new MovieSTAXParser();
     public static DAOFactory getInstance(){
         return instance;
     }

@@ -65,6 +65,6 @@ public class Director implements Serializable {
 
     @Override
     public String toString() {
-        return  name + ' ' + surname;
+        return name + ' ' + surname;
     }
 }

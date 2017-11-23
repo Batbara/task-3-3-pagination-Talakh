@@ -1,4 +1,4 @@
-package by.tr.web.exception.service;
+package by.tr.web.service;
 
 public class MovieServiceException extends Exception {
     public MovieServiceException() {

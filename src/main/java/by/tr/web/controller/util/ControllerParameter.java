@@ -10,5 +10,5 @@ public class ControllerParameter {
     public static final String MOVIES_URL = "/movies.jsp";
     public static final String ERROR_PAGE_URL = "/WEB-INF/jsp/error.jsp";
     public static final String ERROR_MESSAGE = "errorMessage";
-    public static final int RECORDS_PER_PAGE = 5;
+    public static final int RECORDS_PER_PAGE = 3;
 }

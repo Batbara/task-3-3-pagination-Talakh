@@ -1,7 +1,6 @@
 package by.tr.web.service;
 
 import by.tr.web.domain.MovieList;
-import by.tr.web.exception.service.MovieServiceException;
 
 import java.io.File;
 

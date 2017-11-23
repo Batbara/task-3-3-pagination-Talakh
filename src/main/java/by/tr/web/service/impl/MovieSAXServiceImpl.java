@@ -3,8 +3,8 @@ package by.tr.web.service.impl;
 import by.tr.web.dao.MovieDAO;
 import by.tr.web.dao.factory.DAOFactory;
 import by.tr.web.domain.MovieList;
-import by.tr.web.exception.dao.MovieDAOException;
-import by.tr.web.exception.service.MovieServiceException;
+import by.tr.web.dao.MovieDAOException;
+import by.tr.web.service.MovieServiceException;
 import by.tr.web.service.MovieService;
 
 import java.io.File;

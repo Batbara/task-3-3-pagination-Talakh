@@ -1,4 +1,4 @@
-package by.tr.web.controller.util;
+package by.tr.web.controller.listeners;
 
 import by.tr.web.domain.Genre;
 
@@ -16,8 +16,8 @@ public final class XMLData {
     public static final String[] SURNAME_LIST = {"Wheadon", "Coolidge", "Polanski", "Young", "Hoope", "Lucas",
             "Jackson", "Tennant", "Garelick", "Leone", "Raimi", "Foley", "Apted", "Allen", "Hoffman",
             "Tourneur","Berg","Coen","Raimi","Condon"};
-    public static final Genre[] GENRE_LIST = {Genre.action, Genre.comedy, Genre.drama, Genre.drama, Genre.horror, Genre.fantasy,
-            Genre.fantasy, Genre.romance, Genre.romance, Genre.action, Genre.crime,
-            Genre.crime, Genre.drama, Genre.comedy, Genre.romance, Genre.horror, Genre.action,
-            Genre.comedy, Genre.action,Genre.fantasy};
+    public static final Genre[] GENRE_LIST = {Genre.ACTION, Genre.COMEDY, Genre.DRAMA, Genre.DRAMA, Genre.HORROR, Genre.FANTASY,
+            Genre.FANTASY, Genre.ROMANCE, Genre.ROMANCE, Genre.ACTION, Genre.CRIME,
+            Genre.CRIME, Genre.DRAMA, Genre.COMEDY, Genre.ROMANCE, Genre.HORROR, Genre.ACTION,
+            Genre.COMEDY, Genre.ACTION,Genre.FANTASY};
 }

@@ -68,7 +68,8 @@ public class Movie implements Serializable {
     public Director getDirector() {
         return director;
     }
-    public String getDirectorName(){
+
+    public String getDirectorName() {
         return director.toString();
     }
 
@@ -99,15 +100,4 @@ public class Movie implements Serializable {
         result = 31 * result + (director != null ? director.hashCode() : 0);
         return result;
     }
-
-    /*@Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", year=" + year +
-                ", genre=" + genre +
-                ", director=" + director.toString() +
-                '}';
-    }*/
 }

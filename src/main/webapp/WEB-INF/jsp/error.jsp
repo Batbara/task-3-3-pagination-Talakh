@@ -7,7 +7,7 @@
     <title>Error!</title>
 </head>
 <body>
-    <c:out value="${requestScope.errorMessage}"/>
+    <p style="color: crimson"><c:out value="${requestScope.errorMessage}"/></p>
     <form action="${pageContext.request.contextPath}/index.jsp">
         <input type="submit" value="Go back"/>
     </form>

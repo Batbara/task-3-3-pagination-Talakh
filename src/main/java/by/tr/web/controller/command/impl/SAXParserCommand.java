@@ -3,10 +3,10 @@ package by.tr.web.controller.command.impl;
 import by.tr.web.controller.CommandName;
 import by.tr.web.controller.command.Command;
 import by.tr.web.controller.util.ControllerParameter;
-import by.tr.web.controller.util.XMLData;
+import by.tr.web.controller.listeners.XMLData;
 import by.tr.web.controller.util.XMLParameter;
 import by.tr.web.domain.MovieList;
-import by.tr.web.exception.service.MovieServiceException;
+import by.tr.web.service.MovieServiceException;
 import by.tr.web.service.MovieService;
 import by.tr.web.service.factory.ServiceFactory;
 
@@ -26,16 +26,18 @@ public class SAXParserCommand implements Command {
 
         try {
             int page = 1;
-            int recordsPerPage = ControllerParameter.RECORDS_PER_PAGE;
+            int recordsOnPage = ControllerParameter.RECORDS_PER_PAGE;
             int numOfRecords = XMLData.NUMBER_OF_ELEMENTS;
 
             if (request.getParameter(ControllerParameter.PAGE) != null) {
                 page = Integer.parseInt(request.getParameter(ControllerParameter.PAGE));
             }
-            int start = (page - 1) * recordsPerPage;
-
-            MovieList movieList = movieService.parse(source, start, recordsPerPage);
-            int numOfPages = (int) Math.ceil(numOfRecords * 1.0 / recordsPerPage);
+            int start = (page - 1) * ControllerParameter.RECORDS_PER_PAGE;
+            if(numOfRecords < start+recordsOnPage){
+                recordsOnPage = numOfRecords - start;
+            }
+            MovieList movieList = movieService.parse(source, start, recordsOnPage);
+            int numOfPages = (int) Math.ceil(numOfRecords * 1.0 / ControllerParameter.RECORDS_PER_PAGE);
 
             request.setAttribute(XMLParameter.MOVIES, movieList.getMovies());
             request.setAttribute(ControllerParameter.NUM_OF_PAGES, numOfPages);

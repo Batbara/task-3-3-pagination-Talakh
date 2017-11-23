@@ -8,5 +8,5 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = XMLParameter.GENRE_TYPE, namespace = XMLParameter.NAMESPACE)
 @XmlEnum
 public enum Genre {
-    comedy, drama, action, romance, crime, horror, fantasy
+    COMEDY, DRAMA, ACTION, ROMANCE, CRIME, HORROR, FANTASY
 }

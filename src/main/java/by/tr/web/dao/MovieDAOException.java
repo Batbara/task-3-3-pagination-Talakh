@@ -1,4 +1,4 @@
-package by.tr.web.exception.dao;
+package by.tr.web.dao;
 
 public class MovieDAOException extends Exception {
     public MovieDAOException() {

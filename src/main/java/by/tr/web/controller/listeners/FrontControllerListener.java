@@ -1,7 +1,6 @@
 package by.tr.web.controller.listeners;
 
 import by.tr.web.controller.util.ControllerParameter;
-import by.tr.web.controller.util.XMLData;
 import by.tr.web.controller.util.XMLParameter;
 import by.tr.web.domain.Director;
 import by.tr.web.domain.Movie;
@@ -38,7 +37,6 @@ public class FrontControllerListener implements ServletContextListener {
                 source.createNewFile();
             }
             m.marshal(movieList, source);
-            m.marshal(movieList, System.out); // копия на консоль
 
             sce.getServletContext().setAttribute(ControllerParameter.SOURCE, source);
         } catch (JAXBException e) {
